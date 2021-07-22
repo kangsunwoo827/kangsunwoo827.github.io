@@ -7,7 +7,7 @@ permalink:        pretty
 # relative_permalinks: true
 
 # Setup
-title:            선우의 페이지
+title:            '선우의 페이지'
 tagline:          'Sun's Page'
 description:      'Use <a href="http://jekyllrb.com" target="_blank">Jekyll's</a> theme.'
 url:              http://kangsunwoo827.github.io
