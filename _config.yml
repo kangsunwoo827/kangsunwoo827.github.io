@@ -8,7 +8,7 @@ permalink:        pretty
 # Setup
 title:            선우의 페이지
 tagline:          'Sun Page'
-description:      "Use <a href="http://jekyllrb.com" target="_blank">Jekyll's</a> theme."
+description:      'Use <a href="http://jekyllrb.com" target="_blank">Jekyll</a> theme.'
 url:              http://kangsunwoo827.github.io
 baseurl:          /
 
