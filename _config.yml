@@ -7,11 +7,22 @@ permalink:        pretty
 relative_permalinks: true
 
 # Setup
-title:            Hyde
-tagline:          'A Jekyll theme'
-description:      'A brazen two-column <a href="http://jekyllrb.com" target="_blank">Jekyll</a> theme that pairs a prominent sidebar with uncomplicated content. Made by <a href="https://twitter.com/mdo" target="_blank">@mdo</a>.'
-url:              'http://kangsunwoo827.github.io'
+title: Hyde
+description:'A brazen two-column <a href="http://jekyllrb.com" target="_blank">Jekyll</a> theme that pairs a prominent sidebar with uncomplicated content. Made by <a href="https://twitter.com/mdo" target="_blank">@mdo</a>.'
+tagline:'A Jekyll theme'
+url: "http://kangsunwoo827.github.io"
+github: ChemistryX
+email: changeme@chemistryx.me
+google_analytics: <YOUR UA TOKEN>
 baseurl:          /
+
+exclude: [README.md, Gemfile, Gemfile.lock]
+
+comments:
+  enabled: true
+  repo: ChemistryX/hyde-comments
+  issue-term: pathname
+  theme: github-light
 
 author:
   name:           'Mark Otto'
