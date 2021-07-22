@@ -6,8 +6,8 @@ markdown: kramdown
 permalink:        pretty
 
 # Setup
-title:            '선우의 페이지'
-tagline:          "Sun's Page"
+title:            선우의 페이지
+tagline:          'Sun Page'
 description:      'Use <a href="http://jekyllrb.com" target="_blank">Jekyll's</a> theme.'
 url:              http://kangsunwoo827.github.io
 baseurl:          /
