@@ -26,6 +26,15 @@ version:          2.1.0
 
 theme: minima
 
+
+Menus:
+  main:
+    - Name: "Github"
+      URL: "https://github.com/kangsunwoo827"
+    - Name: "LinkedIn"
+      URL: "https://www.linkedin.com/in/sunwoo-k/"
+      
+      
 # MyData
 owner:
   name:           Sunwoo Kang
@@ -35,7 +44,7 @@ owner:
   # Social networking links used in footer. Update and remove as you like.
   facebook:       https://www.facebook.com/profile.php?id=100005674592557
   github:         https://github.com/kangsunwoo827
-  linkedin:       linkedin.com/in/sunwoo-k
+  linkedin:       https://www.linkedin.com/in/sunwoo-k
   instagram:      https://www.instagram.com/sun.star.gram/
 
 github:
