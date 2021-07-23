@@ -9,8 +9,8 @@ relative_permalinks: true
 # Setup
 title:            Sunny World
 tagline:          '강선우의 페이지'
-description:      'The page to organize the days, thoughts and goals.
-
+description: | 
+'The page to organize the days, thoughts and goals.
 B.S. expected in <a href="http://ie.snu.ac.kr" target="_blank">IE</a>'
 
 # This is my <a href="https://github.com/kangsunwoo827" target="_blank">GitHub page</a>'
