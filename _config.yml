@@ -22,7 +22,7 @@ paginate:         5
 # Custom vars
 version:          2.1.0
 
-theme: jekyll-theme-slate
+#theme: jekyll-theme-slate
 
 disqus: True
 github:
