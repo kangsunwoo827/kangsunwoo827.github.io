@@ -24,9 +24,19 @@ paginate:         5
 # Custom vars
 version:          2.1.0
 
-# theme: jekyll-theme-slate
-theme: minima
+theme: minimae
 
-# disqus: True
+# MyData
+owner:
+  name:           Sunwoo Kang
+  avatar:         photo.jpg
+  bio:            "B.S. expected in Industrial Engineering"
+  email:          sunday827827@gmail.com
+  # Social networking links used in footer. Update and remove as you like.
+  facebook:       https://www.facebook.com/profile.php?id=100005674592557
+  github:         https://github.com/kangsunwoo827
+  linkedin:       linkedin.com/in/sunwoo-k
+  instagram:      https://www.instagram.com/sun.star.gram/
+
 github:
   repo:           https://github.com/poole/hyde
