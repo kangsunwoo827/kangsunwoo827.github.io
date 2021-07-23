@@ -23,7 +23,7 @@ paginate:         5
 version:          2.1.0
 
 #theme: jekyll-theme-slate
-
-disqus: True
+theme: minima
+# disqus: True
 github:
   repo:           https://github.com/poole/hyde
