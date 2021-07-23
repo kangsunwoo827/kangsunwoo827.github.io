@@ -9,7 +9,7 @@ permalink:        pretty
 title:            Sunny World
 tagline:          '강선우의 페이지'
 description: >
-  The page to organize the days, thoughts and goals.
+  The page to organize the days, thoughts and goals.<br />
   
   B.S. expected in <a href="http://ie.snu.ac.kr" target="_blank">IE</a>
 
@@ -17,7 +17,6 @@ description: >
 
 url:              http://kangsunwoo827.github.io
 baseurl:          /
-
 paginate:         5
 
 # Custom vars
