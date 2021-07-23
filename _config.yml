@@ -1,9 +1,10 @@
 # Dependencies
-markdown:         redcarpet
+markdown:         kramdown
 highlighter:      pygments
 
 # Permalinks
 permalink:        pretty
+relative_permalinks: true
 
 # Setup
 title:            Sunny World
