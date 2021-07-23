@@ -17,7 +17,7 @@ description: >
 # This is my <a href="https://github.com/kangsunwoo827" target="_blank">GitHub page</a>'
 
 url:              http://kangsunwoo827.github.io
-baseurl:          /
+baseurl:          
 paginate:         5
 
 # Custom vars
