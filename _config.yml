@@ -4,7 +4,9 @@ highlighter:      pygments
 
 # Permalinks
 permalink:        pretty
-
+relative_links:
+  enabled:     true
+  collections: false
 # Setup
 title:            Sunny World
 tagline:          '강선우의 페이지'
