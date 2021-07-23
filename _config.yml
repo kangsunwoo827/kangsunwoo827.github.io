@@ -8,7 +8,7 @@ permalink:        pretty
 # Setup
 title:            Sunny World
 tagline:          '강선우의 페이지'
-description:      'The page to organize the day, thought and dream.  this is my <a href="https://github.com/kangsunwoo827" target="_blank">GitHub page</a>'
+description:      'The page to organize the day, thought and dream.  This is my <a href="https://github.com/kangsunwoo827" target="_blank">GitHub page</a>'
 url:              http://kangsunwoo827.github.io
 baseurl:          /
 
@@ -22,8 +22,9 @@ paginate:         5
 # Custom vars
 version:          2.1.0
 
-#theme: jekyll-theme-slate
-theme: minima
+theme: jekyll-theme-slate
+# theme: minima
+
 # disqus: True
 github:
   repo:           https://github.com/poole/hyde
