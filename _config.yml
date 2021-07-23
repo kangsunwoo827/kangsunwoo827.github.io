@@ -23,7 +23,5 @@ paginate:         5
 version:          2.1.0
 
 disqus: True
-theme: jekyll-theme-primer
-
 github:
   repo:           https://github.com/poole/hyde
