@@ -23,7 +23,9 @@ paginate:         5
 version:          2.1.0
 
 # theme: 
-
+author:
+  name:           'Kang Sunwoo'
+  url:            https://www.instagram.com/sun.star.gram/
 # MyData
 owner:
   name:           Sunwoo Kang
