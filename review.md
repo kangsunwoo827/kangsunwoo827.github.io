@@ -3,19 +3,14 @@ layout: page
 title: Review
 ---
 
+{% include head.html %}
 
-<!DOCTYPE html>
-<html lang="en-us">
+<body class="theme-base-08">
 
-  {% include head.html %}
+  {% include sidebar.html %}
 
-  <body class="theme-base-08">
+  <div class="content container">
+    {{ content }}
+  </div>
 
-    {% include sidebar.html %}
-
-    <div class="content container">
-      {{ content }}
-    </div>
-
-  </body>
-</html>
+</body>
