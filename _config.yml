@@ -18,16 +18,12 @@ description: >
 url:              http://kangsunwoo827.github.io
 baseurl:          /
 
-author:
-  name:           'Mark Otto'
-  url:            https://twitter.com/mdo
-
 paginate:         5
 
 # Custom vars
 version:          2.1.0
 
-theme: minima
+theme: hyde
 
       
       
