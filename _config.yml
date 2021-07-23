@@ -4,27 +4,25 @@ highlighter:      pygments
 
 # Permalinks
 permalink:        pretty
+
 # Setup
 title:            Sunny World
 tagline:          '강선우의 페이지'
 description: >
   The page to organize my days and thoughts.<br />
   B.E. expected in <a href="http://ie.snu.ac.kr" target="_blank">IE</a>
-
-# This is my <a href="https://github.com/kangsunwoo827" target="_blank">GitHub page</a>'
-
+  
 url:              http://kangsunwoo827.github.io
 baseurl:          /
-paginate:         5
 
-# Custom vars
-version:          2.1.0
-
-# theme: 
 author:
   name:           'Kang Sunwoo'
   url:            https://www.instagram.com/sun.star.gram/
-# MyData
+
+paginate:         5
+
+# Custom vars
+version:          1.0.0
 owner:
   name:           Sunwoo Kang
   bio:            "B.S. expected in Industrial Engineering"
@@ -34,3 +32,4 @@ owner:
   github:         https://github.com/kangsunwoo827
   linkedin:       https://www.linkedin.com/in/sunwoo-k
   instagram:      https://www.instagram.com/sun.star.gram/
+
