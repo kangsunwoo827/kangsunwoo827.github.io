@@ -14,6 +14,8 @@ description:      'The page to organize the days, thought and dream.'
 url:              http://kangsunwoo827.github.io
 baseurl:          /
 
+pages:
+  title: review
 
 author:
   name:           'Mark Otto'
@@ -26,13 +28,6 @@ version:          2.1.0
 
 theme: minima
 
-
-Menus:
-  main:
-    - Name: "Github"
-      URL: "https://github.com/kangsunwoo827"
-    - Name: "LinkedIn"
-      URL: "https://www.linkedin.com/in/sunwoo-k/"
       
       
 # MyData
