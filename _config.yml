@@ -10,7 +10,7 @@ title:            Sunny World
 tagline:          '강선우의 페이지'
 description: >
   The page to organize the days, thoughts and goals.<br />
-  
+   <br />
   B.S. expected in <a href="http://ie.snu.ac.kr" target="_blank">IE</a>
 
 # This is my <a href="https://github.com/kangsunwoo827" target="_blank">GitHub page</a>'
@@ -22,10 +22,8 @@ paginate:         5
 # Custom vars
 version:          2.1.0
 
-# theme: hyde
+# theme: 
 
-      
-      
 # MyData
 owner:
   name:           Sunwoo Kang
