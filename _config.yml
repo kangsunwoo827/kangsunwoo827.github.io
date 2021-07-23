@@ -8,7 +8,7 @@ permalink:        pretty
 # Setup
 title:            Sunny World
 tagline:          '강선우의 페이지'
-description:      'The page of student who wants to be a good person.  this is my <a href="https://github.com/kangsunwoo827" target="_blank">GitHub page</a> theme.'
+description:      'The page of student who wants to be a good person.  this is my <a href="https://github.com/kangsunwoo827" target="_blank">GitHub page</a>'
 url:              http://kangsunwoo827.github.io
 baseurl:          /
 
