@@ -14,9 +14,6 @@ description:      'The page to organize the days, thought and dream.'
 url:              http://kangsunwoo827.github.io
 baseurl:          /
 
-pages:
-  title: review
-
 author:
   name:           'Mark Otto'
   url:            https://twitter.com/mdo
