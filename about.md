@@ -1,30 +1,13 @@
 ---
 layout: page
-title: About
+title: About me
 ---
 
 <p class="message">
-  Hey there! This page is included as an example. Feel free to customize it for your own use upon downloading. Carry on!
+  Hello! This page is my homepage. I will be post about my days and my thought. In fact, I made this page to keep a record of reading but I will write other thing. (e.g., studying, daily life and my feeling) Thank you for visiting my page!
 </p>
 
-In the novel, *The Strange Case of Dr. Jeykll and Mr. Hyde*, Mr. Poole is Dr. Jekyll's virtuous and loyal butler. Similarly, Poole is an upstanding and effective butler that helps you build Jekyll themes. It's made by [@mdo](https://twitter.com/mdo).
+I am a student studying industrial engineering in university of seoul. I lived in Anyang, Gyeonggi-do. but, I'm in military service.
 
-There are currently two themes built on Poole:
-
-* [Hyde](http://hyde.getpoole.com)
-* [Lanyon](http://lanyon.getpoole.com)
-
-Learn more and contribute on [GitHub](https://github.com/poole).
-
-## Setup
-
-Some fun facts about the setup of this project include:
-
-* Built for [Jekyll](http://jekyllrb.com)
-* Developed on GitHub and hosted for free on [GitHub Pages](https://pages.github.com)
-* Coded with [Sublime Text 2](http://sublimetext.com), an amazing code editor
-* Designed and developed while listening to music like [Blood Bros Trilogy](https://soundcloud.com/maddecent/sets/blood-bros-series)
-
-Have questions or suggestions? Feel free to [open an issue on GitHub](https://github.com/poole/issues/new) or [ask me on Twitter](https://twitter.com/mdo).
-
-Thanks for reading!
+I'm interested in anything widely, but I don't know it very well. Recently, Finance modeling, portfolio management are of interest. Last year,I studied deep learning and reinforcement learing. So, I'm looking into the crossroads of the two areas, Quantitive finance.
+I am also interested in 'Law' and 'Start-up'. Now, I'm going to study English hard, which I feel is lacking a lot.
