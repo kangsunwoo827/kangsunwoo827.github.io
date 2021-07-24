@@ -1,9 +1,13 @@
 ---
 layout: default
 ---
-{% capture site_categories %}
-<a href="{{ site.baseurl }}{{ page.title }}"><span class="term">{{ page.title }}</span><span class="count">({{ site.categories[page.title].size }})</span></a>
-{% endcapture %}
+
+<div class="page">
+  <h1 class="page-title">{{ page.title }}</h1>
+  {% capture site_categories %}
+  <a href="{{ site.baseurl }}{{ page.title }}"><span class="term">{{ page.title }}</span><span class="count">({{ site.categories[page.title].size }})</span></a>
+  {% endcapture %}
+</div>
 
 <ul class="posts-list">
   
