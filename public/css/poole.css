@@ -444,6 +444,8 @@ a.pagination-item:hover {
   -webkit-transition: color 0.2s;
 }
 
+
+
 .tag::before {
   background: #fff;
   border-radius: 10px;
@@ -474,4 +476,18 @@ a.pagination-item:hover {
 
 .tag:hover::after {
    border-left-color: crimson; 
+}
+
+.tag::active{
+  background: #eee;
+  border-radius: 3px 0 0 3px;
+  color: #999;
+  display: inline-block;
+  height: 26px;
+  line-height: 26px;
+  padding: 0 20px 0 23px;
+  position: relative;
+  margin: 10px 10px 10px 10px;
+  text-decoration: none;
+  -webkit-transition: color 0.2s;
 }
