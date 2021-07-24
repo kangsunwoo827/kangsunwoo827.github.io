@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "첫 포스트!"
-categories : [daily]
+categories : daily
 ---
 ## 생각보다 쉬운데?
 
