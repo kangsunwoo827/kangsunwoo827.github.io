@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "첫 포스트!"
+categories : [status]
 ---
 ## 생각보다 쉬운데?
 
