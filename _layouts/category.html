@@ -1,6 +1,10 @@
 ---
 layout: default
 ---
+{% capture site_categories %}
+<a href="{{ site.baseurl }}{{ page.title }}"><span class="term">{{ page.title }}</span><span class="count">({{ site.categories[page.title].size }})</span></a>
+
+
 <ul class="posts-list">
   
   {% assign category = page.category | default: page.title %}
