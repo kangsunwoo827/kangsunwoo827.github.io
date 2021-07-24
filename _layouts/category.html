@@ -21,7 +21,7 @@ layout: page
     <h2>{{this_word}}</h2>
     <hr>
     <ul>
-      {% for post in site.tags[this_word] %}{% if post.title != null %}
+      {% for post in site.tags[this_word] %}{% if post.title != null and post.categories == page.title %}
       <li>
         <h3>
           <a href="{{ site.baseurl }}{{ post.url }}">
