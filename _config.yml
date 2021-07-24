@@ -22,7 +22,6 @@ author:
 paginate:         5
 
 # Custom vars
-version:          1.0.0
 owner:
   name:           Sunwoo Kang
   bio:            "B.S. expected in Industrial Engineering"
