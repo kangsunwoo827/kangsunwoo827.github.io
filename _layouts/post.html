@@ -3,9 +3,9 @@ layout: default
 ---
 
 <div><i class="fa fa-folder-open"></i>
-  {% assign tags = page.categories %}
-  {% for tag in tags %}
-  <a href="/category/{{tag|slugize}}/">{{tag}}</a>{% unless forloop.last %},{% endunless %}
+  {% assign categories = page.categories %}
+  {% for cat in categories %}
+  <a href="/category/{{cat|slugize}}/">{{cat}}</a>{% unless forloop.last %},{% endunless %}
   {% endfor %}
 </div>
 
@@ -13,6 +13,14 @@ layout: default
   <h1 class="post-title">{{ page.title }}</h1>
   <span class="post-date">{{ page.date | date_to_string }}</span>
   {{ content }}
+</div>
+
+
+<div><i class="fa fa-tag"></i>
+  {% assign tags = page.tags %}
+  {% for tag in tags %}
+  <a href="/tag/{{tag|slugize}}/">{{tag}}</a>{% unless forloop.last %},{% endunless %}
+  {% endfor %}
 </div>
 
 <div class="related">
