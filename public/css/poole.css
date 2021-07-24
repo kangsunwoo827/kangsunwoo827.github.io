@@ -469,7 +469,7 @@ a.pagination-item:hover {
 
 .tag:hover {
   background-color: crimson;
-  color: white;
+  color: white !important;
 }
 
 .tag:hover::after {
