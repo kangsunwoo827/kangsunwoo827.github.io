@@ -39,7 +39,7 @@ layout: default
     <h2>{{this_word}}</h2>
     <hr>
     <ul>
-      {% for post in site.categories[this_word] %}{% if post.title != null %}{% if post.category == page.title %}
+      {% for post in site.categories[this_word] %}{% if post.title != null and post.category == page.title  %}
       <li>
         <h3>
           <a href="{{ site.baseurl }}{{ post.url }}">
