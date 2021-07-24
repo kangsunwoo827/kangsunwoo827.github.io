@@ -27,7 +27,7 @@ layout: default
   {% assign categories_list = site_categories | split:',' | sort %}
   <ul>
       {% for item in (0..site.categories.size) %}{% unless forloop.last %}
-      {% capture this_word %}{{ categories_list[item] | strip_newlines }}{% endcapture %}
+      {% capture this_word %}{{ categories_list[item] }}{% endcapture %}
       <a href="#{{ this_word }}" class="tag">{{ this_word }}</a>
 <!-- { this_word }} 좌우의 <li><span class="term"></span></li> 제거함 -->
 <!--       <span class="count">({{ site.categories[this_word].size }})</span> 제거함 -->
