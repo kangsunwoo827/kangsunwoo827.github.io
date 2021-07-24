@@ -12,7 +12,6 @@ title: Review
     <li><a href="#{{ this_word }}" class="tag"><span class="term">{{ this_word }}</span><span class="count">({{ site.tags[this_word].size }})</span></a></li>
     {% endunless %}{% endfor %}
   </ul>
-  <h2>분류별 글 리스트</h2>
   {% for item in (0..site.tags.size) %}{% unless forloop.last %}
   {% capture this_word %}{{ tags_list[item] | strip_newlines }}{% endcapture %}
   <div style="margin-bottom: 30px;">
