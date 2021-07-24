@@ -444,8 +444,6 @@ a.pagination-item:hover {
   -webkit-transition: color 0.2s;
 }
 
-/* 
-
 .tag::before {
   background: #fff;
   border-radius: 10px;
@@ -467,7 +465,7 @@ a.pagination-item:hover {
   position: absolute;
   right: 0;
   top: 0;
-} */
+}
 
 .tag:hover {
   background-color: crimson;
@@ -475,8 +473,7 @@ a.pagination-item:hover {
 }
 
 .tag:hover::after {
-   border-left-color: crimson; 
-   color: white
+   border-left-color: crimson;
 }
 
 .tag::active{
