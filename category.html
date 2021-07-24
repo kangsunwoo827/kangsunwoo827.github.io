@@ -8,7 +8,7 @@ title: Category
 <ul>
     {% for item in (0..site.categories.size) %}{% unless forloop.last %}
     {% capture this_word %}{{ categories_list[item] | strip_newlines }}{% endcapture %}
-    <li><h3 href="#{{ this_word }}" class="tag"><span class="term">{{ this_word }}</span><span class="count">({{ site.categories[this_word].size }})</span></h3></li>
+    <li><a href="#{{ this_word }}" class="tag"><span class="term">{{ this_word }}</span><span class="count">({{ site.categories[this_word].size }})</span></a></li>
     {% endunless %}{% endfor %}
   </ul>
   {% for item in (0..site.categories.size) %}{% unless forloop.last %}
