@@ -25,14 +25,14 @@ layout: default
 
   {% capture site_categories %}{% for category in site.categories %}{{ category | first }}{% unless forloop.last %},{% endunless %}{% endfor %}{% endcapture %}
   {% assign categories_list = site_categories | split:',' | sort %}
-  <div>
+  <ul style="list-style-type: none;>
       {% for item in (0..site.categories.size) %}{% unless forloop.last %}
       {% capture this_word %}{{ categories_list[item] }}{% endcapture %}
-      <a href="#{{ this_word }}" class="tag">{{ this_word }}</a>
-<!-- { this_word }} 좌우의 <li><span class="term"></span></li> 제거함 -->
+      <a href="#{{ this_word }}" class="tag"><li><span class="term">{{ this_word }}</span></li></a>
+<!-- { this_word }} 좌우의  제거함 -->
 <!--       <span class="count">({{ site.categories[this_word].size }})</span> 제거함 -->
       {% endunless %}{% endfor %}
-    </div>
+    </ul>
     {% for item in (0..site.categories.size) %}{% unless forloop.last %}
     {% capture this_word %}{{ categories_list[item] | strip_newlines }}{% endcapture %}
     <div style="margin-bottom: 30px;">
