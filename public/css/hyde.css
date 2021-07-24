@@ -45,7 +45,17 @@ html {
   }
 }
 
-
+.tag {
+  background-color: #e7e7e7; /* Green */
+  border: none;
+  color: black;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 20%;
+  font-size: 16px;
+}
 /*
  * Sidebar
  *
