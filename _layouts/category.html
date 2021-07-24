@@ -4,7 +4,7 @@ layout: default
 
 <div class="page">
   <h1 href="{{ site.baseurl }}category/{{ page.title }}" class="page-title">{{ page.title }}</h1>
-</div>
+
 
 <!-- <ul class="posts-list">
   
@@ -23,32 +23,33 @@ layout: default
 </ul> -->
 
 
-{% capture site_categories %}{% for category in site.categories %}{{ category | first }}{% unless forloop.last %},{% endunless %}{% endfor %}{% endcapture %}
-{% assign categories_list = site_categories | split:',' | sort %}
-<ul>
+  {% capture site_categories %}{% for category in site.categories %}{{ category | first }}{% unless forloop.last %},{% endunless %}{% endfor %}{% endcapture %}
+  {% assign categories_list = site_categories | split:',' | sort %}
+  <ul>
+      {% for item in (0..site.categories.size) %}{% unless forloop.last %}
+      {% capture this_word %}{{ categories_list[item] | strip_newlines }}{% endcapture %}
+      <li><a href="#{{ this_word }}" class="tag"><span class="term">{{ this_word }}</span><span class="count">({{ site.categories[this_word].size }})</span></a></li>
+      {% endunless %}{% endfor %}
+    </ul>
     {% for item in (0..site.categories.size) %}{% unless forloop.last %}
     {% capture this_word %}{{ categories_list[item] | strip_newlines }}{% endcapture %}
-    <li><a href="#{{ this_word }}" class="tag"><span class="term">{{ this_word }}</span><span class="count">({{ site.categories[this_word].size }})</span></a></li>
-    {% endunless %}{% endfor %}
-  </ul>
-  {% for item in (0..site.categories.size) %}{% unless forloop.last %}
-  {% capture this_word %}{{ categories_list[item] | strip_newlines }}{% endcapture %}
-  <div style="margin-bottom: 30px;">
-  <div id="{{this_word}}"></div>
-  <h2>{{this_word}}</h2>
-  <hr>
-  <ul>
-    {% for post in site.categories[this_word] %}{% if post.title != null %}
-    <li>
-      <h3>
-        <a href="{{ site.baseurl }}{{ post.url }}">
-          {{ post.title }}
-        </a>
-        <small>{{ post.date | date_to_string }}</small>
-      </h3>
-    </li>
-    {% endif %}{% endfor %}
-  </ul>
+    <div style="margin-bottom: 30px;">
+    <div id="{{this_word}}"></div>
+    <h2>{{this_word}}</h2>
+    <hr>
+    <ul>
+      {% for post in site.categories[this_word] %}{% if post.title != null %}
+      <li>
+        <h3>
+          <a href="{{ site.baseurl }}{{ post.url }}">
+            {{ post.title }}
+          </a>
+          <small>{{ post.date | date_to_string }}</small>
+        </h3>
+      </li>
+      {% endif %}{% endfor %}
+    </ul>
+  </div>
+  {% endunless %}{% endfor %}
 </div>
-{% endunless %}{% endfor %}
 
