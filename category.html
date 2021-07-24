@@ -22,13 +22,21 @@ title: Category
   <ul>
     {% for post in site.categories[this_word] %}{% if post.title != null %}
     <li>
+      <h3>
+        <a href="{{ site.baseurl }}{{ post.url }}">
+          {{ post.title }}
+        </a>
+        <small>{{ post.date | date_to_string }}</small>
+      </h3>
+    </li>
+<!--     <li>
       <small>
         {{ post.date | date: "%b %-d, %Y" }}
       </small>
       <h4>
       <a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}">{{ post.title | escape }}</a>
       </h4>
-    </li>
+    </li> -->
     {% endif %}{% endfor %}
   </ul>
 </div>
