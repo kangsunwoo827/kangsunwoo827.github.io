@@ -28,7 +28,8 @@ layout: default
   <ul>
       {% for item in (0..site.categories.size) %}{% unless forloop.last %}
       {% capture this_word %}{{ categories_list[item] | strip_newlines }}{% endcapture %}
-      <li><a href="#{{ this_word }}" class="tag"><span class="term">{{ this_word }}</span><span class="count">({{ site.categories[this_word].size }})</span></a></li>
+      <li><a href="#{{ this_word }}" class="tag"><span class="term">{{ this_word }}</span></a></li>
+<!--       <span class="count">({{ site.categories[this_word].size }})</span> 제거함 -->
       {% endunless %}{% endfor %}
     </ul>
     {% for item in (0..site.categories.size) %}{% unless forloop.last %}
@@ -38,7 +39,7 @@ layout: default
     <h2>{{this_word}}</h2>
     <hr>
     <ul>
-      {% for post in site.categories[this_word] %}{% if post.title != null %}
+      {% for post in site.categories[this_word] %}{% if post.title != null %}{% if post.category == page.title %}
       <li>
         <h3>
           <a href="{{ site.baseurl }}{{ post.url }}">
