@@ -28,7 +28,7 @@ layout: default
   <ul>
       {% for item in (0..site.categories.size) %}{% unless forloop.last %}
       {% capture this_word %}{{ categories_list[item] | strip_newlines }}{% endcapture %}
-      <li><a href="#{{ this_word }}" class="tag"><span class="term">{{ this_word }}</span></a></li>
+      <li><a href="#{{ this_word }}"><span class="tag">{{ this_word }}</span></a></li>
 <!--       <span class="count">({{ site.categories[this_word].size }})</span> 제거함 -->
       {% endunless %}{% endfor %}
     </ul>
