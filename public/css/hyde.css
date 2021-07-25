@@ -79,13 +79,15 @@ html {
 .sidebar-about h1 {
   color: #fff;
   margin-top: 0;
-  font-family: "Roboto Condensed", serif !important;
+  font-family: "Roboto Condensed"!important;
   font-size: 3.25rem;
+  text-align: center;
 }
 
 /* Sidebar nav */
 .sidebar-nav {
   margin-bottom: 1rem;
+  text-align: center;
 }
 .sidebar-nav-item {
   display: block;
