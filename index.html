@@ -9,11 +9,14 @@ title: Home
   <input type="submit" value="search">
 </form>
 
- {% assign category = page.category | default: page.title %}
- {% for cat in site.categories[category] %}
-      <a href="{{ site.baseurl }}{{ cat.url }}">{{ cat.title }}</a>
+<div>
+<!--  {% assign category = page.category | default: page.title %} -->
+ {% for cat in site.categories %}
+  <a href="#">cat.title</a>
+        
+<!--       <a href="{{ site.baseurl }}{{ cat.url }}">{{ cat.title }}</a> -->
  {% endfor %}
-
+</div>
 <!-- <div class="container">
   <div class="row">
     <div class="col-12">
