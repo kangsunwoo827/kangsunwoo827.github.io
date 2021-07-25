@@ -30,6 +30,16 @@
 
 <!--       <a class="sidebar-nav-item" href="{{ site.github.repo }}/archive/v{{ site.version }}.zip">Download</a> -->
       <br></br>
+      
+      <form action="/search">
+         <div class="tipue_search_left">
+           <img src="/assets/tipuesearch/search.png" class="tipue_search_icon">
+         </div>
+         <div class="tipue_search_right">
+           <input type="text" name="q" id="tipue_search_input" pattern=".{1,}" title="At least 1 characters" required></div>
+         <div style="clear: both;"></div>
+      </form>
+    
       <a href="{{ site.owner.facebook }}" target='_blank'> <i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i></a>
       <a href="{{ site.owner.linkedin }}" target='_blank'> <i class="fa fa-linkedin fa-2x" aria-hidden="true"></i></a>
       <a href="{{ site.owner.instagram }}" target='_blank'> <i class="fa fa-instagram fa-2x" aria-hidden="true"></i></a>
