@@ -9,19 +9,18 @@ layout: page
       {% for item in (0..site.tags.size) %}{% unless forloop.last %}
       {% capture this_word %}{{ tags_list[item] }}{% endcapture %}
       <a href="#{{ this_word }}" class="tag"><li style="list-style-type: none;><span class="term">{{ this_word }}</span></li></a>
-
       {% endunless %}{% endfor %}
     </ul>
-    {% for item in (0..site.tags.size) %}{% unless forloop.last %}
+        
+  {% for item in (0..site.tags.size) %}{% unless forloop.last %}
     {% capture this_word %}{{ tags_list[item] | strip_newlines }}{% endcapture %}
     <div style="margin-bottom: 30px;">
-    <div id="{{this_word}}"></div>
-    <h2>{{this_word}}</h2>
-    <hr>
-    <ul>
-      {% for post in site.tags[this_word] %}
-        {% if post.title != null %}
-<!--           {% elsif post.categories == page.title %} -->
+      <div id="{{this_word}}"></div>
+      <h2>{{this_word}}</h2>
+      <hr>
+      <ul>
+        {% for post in site.tags[this_word] %}{% if post.title != null %}
+    <!--           {% elsif post.categories == page.title %} -->
           <li>
             <h3>
               <a href="{{ site.baseurl }}{{ post.url }}">
@@ -30,10 +29,9 @@ layout: page
               <small>{{ post.date | date_to_string }}</small>
             </h3>
           </li>
-        {% endif %}
-      {% endfor %}
-    </ul>
-  </div>
+        {% endif %}{% endfor %}
+      </ul>
+    </div>
   {% endunless %}{% endfor %}
 </div>
 
