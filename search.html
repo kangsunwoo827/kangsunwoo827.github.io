@@ -16,6 +16,7 @@ title: Search
       "{{ post.url | slugify }}": {
         "title": "{{ post.title | xml_escape }}",
         "category": "{{ post.categories | xml_escape }}",
+        "tag": "{{ post.tags | xml_escape }}",
         "published_at" : "{{post.date | date: '%b %d, %y' }}",
         "url": "{{ post.url | xml_escape }}"
       }
