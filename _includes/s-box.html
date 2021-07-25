@@ -1,62 +1,73 @@
+<div class="search-box">
+  <input type="text" class="search-box-input" placeholder="What are you looking for ?">
+  <button class="search-box-btn">
+    <i class="search-box-icon material-icons">search</i>
+  </button>
+</div>
+
 <style>
-  body
-{
-  margin: 0;
-  padding: 0;
+  *{
+	box-sizing: border-box;
 }
-.search-box
-{
-  position : absolute;
-  top : 10%;
-  left : 90%;
-  transform : translate(-50%,-50%);
-  background : #2F3640;
-  height : 40px;
-  border-radius : 40px;
-  padding : 10px;
+body{
+	background: #25283D;
+	font-family: roboto,Arial;
 }
-.search-btn
-{
-  color : #4097FF;
-  float : right;
-  width : 40px;
-  height : 40px;
-  border-radius: 50%;
-  background : #2F3640;
-  display:flex;
-  justify-content: center;
-  align-items: center;
-  text-decoration: none;
-  transition:0.4s;
+.container{
+	position: absolute;
+	top: 10%;
+	left: 90%;
+	transform: translate(-50%,-50%);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 }
-.search-txt
-{
-  border:none;
-  background:none;
-  outline:none;
-  float:left;
-  padding:0;
-  color: #fff;
-  font-size:16px;
-  transition : 0.4s;
-  line-height: 40px;
-  width : 0px;
+h1{
+	color: #fff;
+	font-weight: 400;
 }
-.search-box:hover > .search-txt
-{
-  width: 240px;
-  padding: 0 6px;
+input, button{
+	border: none;
+	background: none;
+	outline: none;
 }
-.search-box:hover > .search-btn
-{
- background:white;
+button{
+	cursor: pointer;
+}
+.search-box{
+	display: flex;
+	background: #08090A;
+	border-radius: 4em;
+}
+.search-box-input{
+	width: 0px;
+	font-size: 1em;
+	color: #fff;
+	transition: .5s;
+}
+.search-box-btn{
+	display: flex;
+	border-radius: 50%;
+	width: 4em;
+	height: 4em;
+	background: white;
+	transition: .3s;
+}
+.search-box-icon{
+	margin: auto;
+	color: black;
+}
+.search-box-input::placeholder{
+	color: white;
+	opacity: .7;
+}
+.search-box:hover .search-box-input{
+	padding-left: 2em;
+	padding-right: 1em;
+	width: 340px;
+}
+.search-box-btn:active{
+	transform: scale(.75);
 }
 </style>
-<form action="/search/" method="get">
-  <div class="search-box">
-       <input class="search-txt" type="text" name="query" placeholder="Type to Search">
-  <input  type="submit" class="search-btn" value="search">
-    <i class="fa fa-search"></i>
-  </a>
-  </div>
-</form
