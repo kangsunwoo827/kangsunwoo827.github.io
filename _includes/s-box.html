@@ -1,71 +1,83 @@
-<form action="/search/" method="get" class="search-box">
-  <input type="text" class="search-box-input" name="query" placeholder="What are you looking for ?">
-  <button class="search-box-btn" type="submit" value="search">
-    <i class="fa fa-search search-box-icon"></i>
-  </button>
+<!-- <i class="fa fa-search search-box-icon"></i> -->
+
+
+ <form action="/search/" method="get" class="search-box">
+
+    <input type="text" class="search-txt" name="query" placeholder="Search...">
+
+    <button class="search-btn" type="submit" value="search">
+
+	<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+
+    </button>
+
 </form>
 <style>
-  *{
-	box-sizing: border-box;
+	@import url('https://fonts.googleapis.com/css?family=Ubuntu');
+
+* {
+     font-family: 'Ubuntu', sans-serif;
+ }
+
+body, html{
+    padding:0px;
+    margin:0px;
+    text-align:center;
+    background:#252525;
+    max-width:400px;
+    max-height:500px;
 }
+
+.search-box {
+    position:absolute;
+    transform:translate(10%, 20%);
+    background:#2f3640;
+    border-radius:40px;
+    height:30px;
+    padding:7px;
+    box-shadow:0px 0px 10px 0px rbg(0,0,0,0.2);
 }
-.container{
-	position: relative;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%,-50%);
-	display: flex;
-	flex-direction: column;
-	justify-content: flex-end;
-/* 	justify-content: center
-	align-items: center였음 */
-	align-items: flex-start;
+
+.search-btn {
+    border:none;
+    background:crimson;
+    border-radius:50%;
+    float:right;
+    display:flex;
+    width:30px;
+    height:30px;
+    justify-content:center;
+    align-items:center;
+    outline:none;
+    transition:0.6s;
+    font-weight:bold;
+    color:#FFFFFF;
+    box-shadow:0px 0px 10px 0px crimson;
 }
-h1{
-	color: #08090A;
-	font-weight: 400;
+
+.search-txt {
+    background:none;
+    border:none;
+    outline:none;
+    float:left;
+    padding:0px;
+    font-size:16px;
+    transition:0.6s;
+    color:crimson;
+    font-weight:bold;
+    line-height:30px;
+    width:0px;
 }
-input, button{
-	border: none;
-	background: none;
-	outline: none;
+
+.search-box:hover > .search-txt {
+    width:240px;
+    padding:0 6px;
 }
-button{
-	cursor: pointer;
+
+.search-box:hover > .search-btn {
+    background:crimson;
+    color:#FFFFFF;
+    box-shadow:0px 5px 20px 0px crimson;
 }
-.search-box{
-	display: flex;
-	background: #ac4142;
-	border-radius: 4em;
-}
-.search-box-input{
-	width: 0px;
-	font-size: 1em;
-	color: #fff;
-	transition: .5s;
-}
-.search-box-btn{
-	display: flex;
-	border-radius: 50%;
-	width: 4em;
-	height: 4em;
-	background: #fff;
-	transition: .3s;
-}
-.search-box-icon{
-	margin: auto;
-	color: black;
-}
-.search-box-input::placeholder{
-	color: white;
-	opacity: .7;
-}
-.search-box:hover .search-box-input{
-	padding-left: 2em;
-	padding-right: 1em;
-	width: 100%;
-}
-.search-box-btn:active{
-	transform: scale(.75);
-}
+
 </style>
