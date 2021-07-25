@@ -491,7 +491,7 @@ a.pagination-item:hover {
   transition: width 0.4s ease-in-out, border-radius 0.8s ease-in-out,
     padding 0.2s;
   transition-delay: 0.4s;
-  color: white;
+  color: #ac4142;
   font-size: 20px;
   text-transform: uppercase;
 }
