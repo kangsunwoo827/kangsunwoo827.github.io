@@ -478,24 +478,9 @@ a.pagination-item:hover {
   
 /* ---- */
   
-  
-.body {
-  margin: 0;
-  padding: 0;
-  /* background: #2ecc71; */
-  /* background: coral; */
-  /* background: dodgerblue; */
-  background: slateblue;
-}
 
-.middle {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
 
-.input {
+.input#search-box {
   width: 60px;
   height: 60px;
   background: none;
@@ -511,14 +496,14 @@ a.pagination-item:hover {
   text-transform: uppercase;
 }
 
-.inclicked {
+.inclicked#search-box {
   width: 360px;
   border-radius: 0;
   padding: 0 15px;
   padding-right: 40px;
 }
 
-.btn {
+.btn#search-button {
   position: absolute;
   width: 60px;
   height: 60px;
@@ -531,7 +516,7 @@ a.pagination-item:hover {
   cursor: pointer;
 }
 
-.btn::before {
+.btn#search-button::before {
   content: "";
   width: 4px;
   height: 25px;
@@ -543,8 +528,8 @@ a.pagination-item:hover {
   transition: 0.3s;
 }
 
-.close::before,
-.close::after {
+.close#search-button::before,
+.close#search-button::after {
   content: "";
   width: 4px;
   height: 34px;
@@ -554,10 +539,10 @@ a.pagination-item:hover {
   right: 28px;
 }
 
-.close::before {
+.close#search-button::before {
   transform: rotate(-45deg);
 }
 
-.close::after {
+.close#search-button::after {
   transform: rotate(45deg);
 }
