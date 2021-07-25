@@ -22,15 +22,14 @@ layout: page
       {% for post in site.tags[this_word] %}
         {% if post.title != null %}
 <!--           {% elsif post.categories == page.title %} -->
-            <li>
-              <h3>
-                <a href="{{ site.baseurl }}{{ post.url }}">
-                  {{ post.title }}
-                </a>
-                <small>{{ post.date | date_to_string }}</small>
-                <div>{{post.categories}}{{page.title}}</div>
-              </h3>
-            </li>
+          <li>
+            <h3>
+              <a href="{{ site.baseurl }}{{ post.url }}">
+                {{ post.title }} {{ post.categories }} {{ page.title }}
+              </a>
+              <small>{{ post.date | date_to_string }}</small>
+            </h3>
+          </li>
         {% endif %}
       {% endfor %}
     </ul>
