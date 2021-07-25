@@ -30,14 +30,23 @@
 
 <!--       <a class="sidebar-nav-item" href="{{ site.github.repo }}/archive/v{{ site.version }}.zip">Download</a> -->
    
-      <form action="/search">
-         <div class="tipue_search_left">
-           <img src="/assets/tipuesearch/search.png" class="tipue_search_icon">
-         </div>
-         <div class="tipue_search_right">
-           <input type="text" name="q" id="tipue_search_input" pattern=".{1,}" title="At least 1 characters" required></div>
-         <div style="clear: both;"></div>
-      </form>
+      {% if site.subscribers %}
+        <div id="subscribe" class="subscribe-overlay">
+            <a class="subscribe-overlay-close" href="#"></a>
+            <div class="subscribe-overlay-content">
+                {% if site.logo %}
+                    <img class="subscribe-overlay-logo" 
+                         src="{{ site.baseurl }}{{ site.logo }}" 
+                         alt="{{ site.title }}" />
+                {% endif %}
+                <h1 class="subscribe-overlay-title">Search {{ site.title }}</h1>
+                <p class="subscribe-overlay-description">
+                lunr.js를 이용한 posts 검색 </p>
+                {% include subscribe-form.html placeholder="keyword" %}
+            </div>
+        </div>
+      {% endif %}
+      
       <br></br>
       <a href="{{ site.owner.facebook }}" target='_blank'> <i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i></a>
       <a href="{{ site.owner.linkedin }}" target='_blank'> <i class="fa fa-linkedin fa-2x" aria-hidden="true"></i></a>
