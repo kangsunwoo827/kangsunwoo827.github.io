@@ -2,6 +2,7 @@
 layout: post
 title:  "첫 포스트!"
 categories : daily
+tags: [thought, github_page]
 ---
 ## 생각보다 쉬운데?
 
