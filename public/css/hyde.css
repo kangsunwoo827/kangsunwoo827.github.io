@@ -90,7 +90,7 @@ html {
   text-align: center;
 }
 .sidebar-nav-item {
-  font-size: 1.25em;
+  font-size: 1.25em!important;
   display: block;
   line-height: 1.75;
 }
