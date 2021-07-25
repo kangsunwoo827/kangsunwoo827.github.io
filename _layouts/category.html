@@ -1,9 +1,7 @@
 ---
 layout: page
 ---
-
 <div class="page">
-<!--   <h1 href="{{ site.baseurl }}category/{{ page.title }}" class="page-title">{{ page.title }}</h1> -->
   {% capture site_tags %}{% for tag in site.tags %}{{ tag | first }}{% unless forloop.last %},{% endunless %}{% endfor %}{% endcapture %}
   {% assign tags_list = site_tags | split:',' | sort %}
   <ul>
@@ -13,7 +11,7 @@ layout: page
     {% endunless %}{% endfor %}
   </ul>
         
-    {% for item in (0..site.tags.size) %}{% unless forloop.last %}
+  {% for item in (0..site.tags.size) %}{% unless forloop.last %}
     {% capture this_word %}{{ tags_list[item] | strip_newlines }}{% endcapture %}
     <div style="margin-bottom: 30px;">
     <div id="{{this_word}}"></div>
@@ -21,14 +19,12 @@ layout: page
     <hr>
     <ul>
       {% for post in site.tags[this_word] %}{% if post.title != null %}
-<!--       {% for post in site.tags[this_word] %}{% if post.title != null and post.categories == page.title %} -->
+      <!--           {% elsif post.categories == page.title %} -->
       <li>
-        <h3>
-          <a href="{{ site.baseurl }}{{ post.url }}">
-            {{ post.title }}
-          </a>
-          <small>{{ post.date | date_to_string }}</small>
-        </h3>
+      <h3>
+      <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+      <small>{{ post.date | date_to_string }}</small>
+      </h3>
       </li>
       {% endif %}{% endfor %}
     </ul>
