@@ -32,12 +32,3 @@ owner:
   linkedin:       https://www.linkedin.com/in/sunwoo-k
   instagram:      https://www.instagram.com/sun.star.gram/
 
-tipue_search:
-   include:
-       pages: false
-       collections: []
-   exclude:
-       files: [search.html, index.html, category.html]
-       categories: []
-       tags: []
-
