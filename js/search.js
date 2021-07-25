@@ -7,8 +7,9 @@
 
       for (var i = 0; i < results.length; i++) {  // Iterate over the results
         var item = store[results[i].ref];
-        appendString += '<li><a href="' + item.url + '"><h3>' + item.title + '</h3></a>';
-        appendString += '<p>' + item.content.substring(0, 150) + '...</p></li>';
+        appendString += '<div class="search__result"><a href="' + item.url + '"><h5 class="post-title">' + item.title + '</h5></a>';
+        appendString += '<div class="post-description"><small class="post-date">' + item.published_at + '</small></div>';
+        appendString += '</div>'
       }
 
       searchResults.innerHTML = appendString;
@@ -40,18 +41,14 @@
     var idx = lunr(function () {
       this.field('id');
       this.field('title', { boost: 10 });
-      this.field('author');
       this.field('category');
-      this.field('content');
     });
 
     for (var key in window.store) { // Add the data to lunr
       idx.add({
         'id': key,
         'title': window.store[key].title,
-        'author': window.store[key].author,
         'category': window.store[key].category,
-        'content': window.store[key].content
       });
 
       var results = idx.search(searchTerm); // Get lunr to perform a search
