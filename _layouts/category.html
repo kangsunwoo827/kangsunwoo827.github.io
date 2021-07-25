@@ -23,9 +23,7 @@ layout: page
     <!--           {% elsif post.categories == page.title %} -->
           <li>
             <h3>
-              <a href="{{ site.baseurl }}{{ post.url }}">
-                {{ post.title }} {{ post.categories }} {{ page.title }}
-              </a>
+              <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
               <small>{{ post.date | date_to_string }}</small>
             </h3>
           </li>
