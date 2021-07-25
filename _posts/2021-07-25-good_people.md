@@ -1,4 +1,3 @@
-http://image.ichannela.com/webdata/2019_03/img_concept_2019_03_27_045305212.jpg
 ---
 layout: post
 title: 굿피플_신입사원 탄생기
