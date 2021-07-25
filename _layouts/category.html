@@ -21,16 +21,19 @@ layout: page
     <h2>{{this_word}}</h2>
     <hr>
     <ul>
-      {% for post in site.tags[this_word] %}{% if post.title != null and post.categories == page.title %}
-      <li>
-        <h3>
-          <a href="{{ site.baseurl }}{{ post.url }}">
-            {{ post.title }}
-          </a>
-          <small>{{ post.date | date_to_string }}</small>
-        </h3>
-      </li>
-      {% endif %}{% endfor %}
+      {% for post in site.tags[this_word] %}
+        {% if post.title != null %}
+          {% elsif post.categories == page.title %}
+            <li>
+              <h3>
+                <a href="{{ site.baseurl }}{{ post.url }}">
+                  {{ post.title }}
+                </a>
+                <small>{{ post.date | date_to_string }}</small>
+              </h3>
+            </li>
+        {% endif %}
+      {% endfor %}
     </ul>
   </div>
   {% endunless %}{% endfor %}
