@@ -2,7 +2,7 @@
 layout: page
 ---
 <div>
-  {% for tag in site.tags %}<a href='#'>{% tag|last|where "category", post.title %}</a>
+  {% for tag in site.tags %}<a href='#'>{% tag|last|where "category", post.title %}</a>{% endfor %}
 <div class="page">
   {% capture site_tags %}{% for tag in site.tags %}{{ tag | first }}{% unless forloop.last %},{% endunless %}{% endfor %}{% endcapture %}
   {% assign tags_list = site_tags | split:',' | sort %}
