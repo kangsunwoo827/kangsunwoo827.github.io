@@ -15,20 +15,20 @@ layout: page
   {% for item in (0..site.tags.size) %}{% unless forloop.last %}
     {% capture this_word %}{{ tags_list[item] | strip_newlines }}{% endcapture %}
     <div style="margin-bottom: 30px;">
-      <div id="{{this_word}}"></div>
-      <h2>{{this_word}}</h2>
-      <hr>
-      <ul>
-        {% for post in site.tags[this_word] %}{% if post.title != null %}
-    <!--           {% elsif post.categories == page.title %} -->
-          <li>
-            <h3>
-              <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
-              <small>{{ post.date | date_to_string }}</small>
-            </h3>
-          </li>
-        {% endif %}{% endfor %}
-      </ul>
+    <div id="{{this_word}}"></div>
+    <h2>{{this_word}}</h2>
+    <hr>
+    <ul>
+      {% for post in site.tags[this_word] %}{% if post.title != null %}
+      <!--           {% elsif post.categories == page.title %} -->
+      <li>
+      <h3>
+      <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+      <small>{{ post.date | date_to_string }}</small>
+      </h3>
+      </li>
+      {% endif %}{% endfor %}
+    </ul>
     </div>
   {% endunless %}{% endfor %}
 </div>
