@@ -9,6 +9,11 @@ title: Home
   <input type="submit" value="search">
 </form>
 
+{% assign category_list = site.category %}
+{% for node in category_list %}
+      <a href="{{ node.url }}">{{ node.title }}</a>
+{% endfor %}
+
 <!-- <div class="container">
   <div class="row">
     <div class="col-12">
