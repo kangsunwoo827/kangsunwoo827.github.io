@@ -23,6 +23,11 @@
         {% endif %}
       {% endfor %}
 
+<!--       카테고리별 링크 만들기 -->
+      {% assign pages_list = site.category %}
+      {% for node in pages_list %}
+            <a class="sidebar-nav-item{% if page.url == node.url %} active{% endif %}" href="{{ node.url }}">{{ node.title }}</a>
+      {% endfor %}
       
       <br></br>
       <a href="{{ site.owner.facebook }}" target='_blank'> <i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i></a>
