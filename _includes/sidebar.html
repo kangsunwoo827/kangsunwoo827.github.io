@@ -24,11 +24,11 @@
       {% endfor %}
 
 <!--       카테고리별 링크 만들기 -->
-      {% assign category_list = site.category %}
-      {% for node in category_list %}
-            <a class="sidebar-nav-item{% if page.url == node.url %} active{% endif %}" href="{{ node.url }}">{{ node.title }}</a>
-      {% endfor %}
-      
+      <div>
+       {% for cat in site.category_list %}
+        <a href="/category/{{cat}}">{{cat}}</a>
+       {% endfor %}
+      </div>
       <br></br>
       <a href="{{ site.owner.facebook }}" target='_blank'> <i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i></a>
       <a href="{{ site.owner.linkedin }}" target='_blank'> <i class="fa fa-linkedin fa-2x" aria-hidden="true"></i></a>
