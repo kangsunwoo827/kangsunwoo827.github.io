@@ -2,7 +2,7 @@
 layout: page
 ---
 <div class="page">
-  {% for post in site.posts %}{% assign post_tags= post.tags | where: "categories","daily" | split:',' %}{% assign tags_lst = "coding" | concat: post_tags %}{% endfor %}
+  {% capture tags_lst %}{% for post in site.posts %}{{ post.tags | where: "categories","daily" }}{% endfor %}{% endcapture %}
   <a href='#'>{{ tags_lst | unique}} </a>
 <!--   {% for tag in site.tags %}{% assign post_lst=tag|last| where: "categories","daily" %}<a href='#'>{{ post_lst}} </a>{% endfor %} -->
   
