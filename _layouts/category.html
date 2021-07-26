@@ -2,8 +2,8 @@
 layout: page
 ---
 <div class="page">
-  {% capture tags_lst %}{% for post in site.posts %}{{ post.tags | where: "categories","daily" }}{% endfor %}{% endcapture %}
-  <a href='#'>{{ tags_lst | unique}} </a>
+  {% capture tags_lst %}{% for post in site.posts %}{% if post.categories contains page.title%}{% for tag in post.tags %} {{ tag | first }}{% endfor %}{% endif %}{% endfor %}{% endcapture %}
+<!--   <a href='#'>{{ tags} </a> -->
 <!--   {% for tag in site.tags %}{% assign post_lst=tag|last| where: "categories","daily" %}<a href='#'>{{ post_lst}} </a>{% endfor %} -->
   
   
