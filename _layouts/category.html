@@ -3,7 +3,7 @@ layout: page
 ---
 <div class="page">
   {% assign tags_array = "" | split: ',' %}
-  {% for post in site.posts %}{% assign tags_array = tags_array | push: post.title %}{% endfor %}
+  {% for post in site.posts %}{% if post.categories contains page. title%}{% for tag in post.tags %}{% assign tags_array = tags_array | push: tag %}{% endfor %}{% endif %}{% endfor %}
   <a href='#'>{{ tags_array }} </a>
 <!--   {% for tag in site.tags %}{% assign post_lst=tag|last| where: "categories","daily" %}<a href='#'>{{ post_lst}} </a>{% endfor %} -->
   
