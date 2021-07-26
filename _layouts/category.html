@@ -4,7 +4,7 @@ layout: page
 <div class="page">
   {% assign tags_array = "" | split: ',' %}
   {% for post in site.posts %}{% if post.categories contains page. title%}{% for tag in post.tags %}{% assign tags_array = tags_array | push: tag %}{% endfor %}{% endif %}{% endfor %}
-<!--   <a href='#'>{{ tags_array | unique}} </a> -->
+  <a href='#'>{{ tags_array | unique}} </a>
   
   {% assign tags_list = tags.array | uniuqe %}
   <ul>
