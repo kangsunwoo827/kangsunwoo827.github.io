@@ -10,7 +10,7 @@ tags: [paper,stock,hmm,finance]
 는 수식을 적어야되는데 너무 귀찮다 그냥 거의 말로만 적어봐야지 
 
 이 논문은 주식의 주가(Stock value)를 예측하는 방법으로 HMM(Hidden Markov Model)을 제시하고 있다.
-HMM은 Markov Model과 유사하지만 상태 S~t~는 숨겨져 있고 그 State로 부터 관측되는 관측치 O~t~만 볼 수 있는 상태로 분석해보는 것이다.
+HMM은 Markov Model과 유사하지만 상태 S~ t ~는 숨겨져 있고 그 State로 부터 관측되는 관측치 O~ t ~만 볼 수 있는 상태로 분석해보는 것이다.
 
 HMM: λ = (π,A,B) 라는 수식이 논문에서 주어진다.
 π는 한 state가 첫 시점 즉 t=1일 때 시작할 확률을 말하고
