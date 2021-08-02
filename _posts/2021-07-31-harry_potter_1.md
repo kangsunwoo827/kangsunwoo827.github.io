@@ -1,5 +1,5 @@
 ---
-layout: review
+layout: post
 title: Harry potter - Philosopher's stone
 categories: [review]
 tags: [book,english,harrypotter,novel,sf]
