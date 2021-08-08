@@ -9,6 +9,14 @@ title: Home
 <br></br>
 <div class="posts">
   {% for post in paginator.posts %}
+  <li>
+      <h3>
+        <a href="{{ site.baseurl }}{{ post.url }}">
+          {{ post.title }}
+        </a>
+        <small>{{ post.date | date_to_string }}</small>
+      </h3>
+  </li>
   <div class="post">
     <h1 class="post-title">
       <a href="{{ post.url }}">
@@ -40,24 +48,4 @@ title: Home
   {% endif %}
 </div>
 
-
-<div class="page">
-  <h1 href="{{ site.baseurl }}tag/{{ page.title }}" class="page-title">{{ page.title }}</h1>
-</div>
-
-<ul class="posts-list">
-  
-  {% assign tag = page.tag | default: page.title %}
-  {% for post in site.tags[tag] %}
-    <li>
-      <h3>
-        <a href="{{ site.baseurl }}{{ post.url }}">
-          {{ post.title }}
-        </a>
-        <small>{{ post.date | date_to_string }}</small>
-      </h3>
-    </li>
-  {% endfor %}
-  
-</ul>
 
