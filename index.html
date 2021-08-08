@@ -9,12 +9,6 @@ title: Home
 <br></br>
 <div class="posts">
   {% for post in paginator.posts %}
-      <h3>
-        <a href="{{ site.baseurl }}{{ post.url }}">
-          {{ post.title }}
-        </a>
-        <small>{{ post.date | date_to_string }}</small>
-      </h3>
  
   <div class="post">
     <h1 class="post-title">
@@ -25,7 +19,7 @@ title: Home
 
     <span class="post-date">{{ post.date | date_to_string }}</span>
 
-    {{ post.excerpt }}
+    {{post.excerpt | truncatewords: 45, '...' }}
   </div>
   {% endfor %}
 </div>
