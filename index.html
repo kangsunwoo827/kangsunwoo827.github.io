@@ -19,7 +19,7 @@ title: Home
 
     <span class="post-date">{{ post.date | date_to_string }}</span>
 
-    {{post.excerpt | truncatewords: 45, '...' }}
+    {{post.excerpt | truncatewords: 3, '...' }}
   </div>
   {% endfor %}
 </div>
