@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 근무자로서의 첫 하루 (닭 야채 조림, 돼지 불고기)
+title: 근무자로서의 첫 하루    (닭 야채 조림, 돼지 불고기)
 categories: [daily]
 tags: [cooking,chicken,pork]
 ---
