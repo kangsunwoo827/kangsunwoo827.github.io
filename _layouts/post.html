@@ -8,7 +8,11 @@ layout: default
   <a href="/category/{{cat|slugize}}/">{{cat}}</a>{% unless forloop.last %},{% endunless %}
   {% endfor %}
 </div>
-
+<div style="text-align: center;">
+	<a href="http://hits.dwyl.com/{{ site.url | remove_first: 'https://' | remove_first: 'http://' }}/{{ page.url | remove_first: '/' | replace: '/', '-' }}" target="_blank">
+	  <img src="http://hits.dwyl.com/{{ site.url | remove_first: 'https://' | remove_first: 'http://' }}/{{ page.url | remove_first: '/' | replace: '/', '-' }}.svg" />
+	</a>
+</div> 
 <div class="post">
   <h1 class="post-title">{{ page.title }}</h1>
   <span class="post-date">{{ page.date | date_to_string }}</span>
