@@ -9,15 +9,14 @@ title: Home
 <br></br>
 <div class="posts">
   {% for post in paginator.posts %}
-  <li>
       <h3>
         <a href="{{ site.baseurl }}{{ post.url }}">
           {{ post.title }}
         </a>
         <small>{{ post.date | date_to_string }}</small>
       </h3>
-  </li>
-  <div class="post">
+ 
+<!--   <div class="post">
     <h1 class="post-title">
       <a href="{{ post.url }}">
         {{ post.title }}
@@ -27,7 +26,7 @@ title: Home
     <span class="post-date">{{ post.date | date_to_string }}</span>
 
     {{ post.content }}
-  </div>
+  </div> -->
   {% endfor %}
 </div>
 
