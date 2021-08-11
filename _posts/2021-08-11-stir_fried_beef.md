@@ -2,7 +2,7 @@
 layout: post
 title: 청경채 쇠고기 볶음
 categories: [daily]
-tags: [cooking, pork]
+tags: [cooking, beef]
 ---
 오늘 아침에는 청경채 소고기 볶음을 했다.
 원래는 청경채 쇠고기 두반장볶음인데 두반장이 재료에 없길래 그냥 고추장 간장 설탕 넣고 만들었다.
