@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 쇠고기 파프리카 볶음
+title: 오늘의 날씨는~ 아 주 조 
 categories: [daily]
 tags: [diary, thought, feeling]
 ---
