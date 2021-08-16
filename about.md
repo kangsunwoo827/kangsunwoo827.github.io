@@ -11,8 +11,7 @@ comment: true
   <video autoplay loop muted width="250">
 
       <source src="/media/my_video.mp4"
-              type="video/mp4"
-              text-align: center;>
+              type="video/mp4">
 
       Sorry, your browser doesn't support embedded videos.
   </video>
