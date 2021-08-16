@@ -8,7 +8,7 @@ comment: true
   Hello! This page is my homepage. I will be post about my days and my thought. In fact, I made this page to keep a record of reading but I will write other thing. (e.g., studying, daily life and my feeling) Thank you for visiting my page!
 </p>
 
-<video controls width="250">
+<video autoplay loop controls width="250">
 
     <source src="/media/my_video.mp4"
             type="video/mp4">
