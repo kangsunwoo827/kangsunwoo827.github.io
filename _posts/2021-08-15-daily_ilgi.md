@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 오늘의 날씨는~ 아 주 조 
+title: 오늘의 날씨는~ 아 주 조 아
 categories: [daily]
 tags: [diary, thought, feeling]
 ---
