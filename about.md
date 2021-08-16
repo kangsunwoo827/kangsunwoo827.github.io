@@ -7,16 +7,16 @@ comment: true
 <p class="message">
   Hello! This page is my homepage. I will be post about my days and my thought. In fact, I made this page to keep a record of reading but I will write other thing. (e.g., studying, daily life and my feeling) Thank you for visiting my page!
 </p>
+<div style="text-align:center;">
+  <video autoplay loop muted width="250">
 
-<video autoplay loop muted width="250">
+      <source src="/media/my_video.mp4"
+              type="video/mp4"
+              text-align: center;>
 
-    <source src="/media/my_video.mp4"
-            type="video/mp4"
-            text-align: center;>
-
-    Sorry, your browser doesn't support embedded videos.
-</video>
-
+      Sorry, your browser doesn't support embedded videos.
+  </video>
+</div>
 
 
 I am a student studying industrial engineering in university of seoul. I lived in Anyang, Gyeonggi-do. but, I'm in military service.
