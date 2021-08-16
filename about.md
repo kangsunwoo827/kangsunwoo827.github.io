@@ -8,6 +8,16 @@ comment: true
   Hello! This page is my homepage. I will be post about my days and my thought. In fact, I made this page to keep a record of reading but I will write other thing. (e.g., studying, daily life and my feeling) Thank you for visiting my page!
 </p>
 
+<video controls width="250">
+
+    <source src="/media/my_video.mp4"
+            type="video/mp4">
+
+    Sorry, your browser doesn't support embedded videos.
+</video>
+
+
+
 I am a student studying industrial engineering in university of seoul. I lived in Anyang, Gyeonggi-do. but, I'm in military service.
 
 I'm interested in anything widely, but I don't know it very well. Recently, Finance modeling, portfolio management are of interest. Last year,I studied deep learning and reinforcement learing. So, I'm looking into the crossroads of the two areas, Quantitive finance.
