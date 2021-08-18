@@ -8,77 +8,7 @@ title: Home
 <br></br>
 <br></br>
 
-<div class="contentContainer">
-
-  <div class="skillBar">
-    <h4>HTML</h4>
-    <div class="skillBarContainer">
-      <div class="skillBarValue value-90"></div>
-    </div>
-  </div>
-
-  <div class="skillBar">
-    <h4>CSS3</h4>
-    <div class="skillBarContainer">
-      <div class="skillBarValue value-80"></div>
-    </div>
-  </div>
-  
-  <div class="skillBar">
-    <h4>SASS</h4>
-    <div class="skillBarContainer">
-      <div class="skillBarValue value-90"></div>
-    </div>
-  </div>
-
-  <div class="skillBar">
-    <h4>jQuery</h4>
-    <div class="skillBarContainer">
-      <div class="skillBarValue value-70"></div>
-    </div>
-  </div>
-  
-  <div class="skillBar">
-    <h4>JavaScript</h4>
-    <div class="skillBarContainer">
-      <div class="skillBarValue value-20"></div>
-    </div>
-  </div>
-
-  <div class="skillBar">
-    <h4>PHP</h4>
-    <div class="skillBarContainer">
-      <div class="skillBarValue value-40"></div>
-    </div>
-  </div>
-  
-  <div class="skillBar">
-    <h4>WordPress</h4>
-    <div class="skillBarContainer">
-      <div class="skillBarValue value-80"></div>
-    </div>
-  </div>
-
-</div>
-
-<div class="posts">
-  {% for post in paginator.posts %}
- 
-  <div class="post">
-    <h2 class="post-title">
-      <a href="{{ post.url }}">
-        {{ post.title }}
-      </a>
-    </h2>
-
-    <span class="post-date">{{ post.date | date_to_string }}</span>
-
-    {{post.excerpt | truncatewords: 3, '...' }}
-    <hr>
-  </div>
-  {% endfor %}
-</div>
-
+{% include progress.html %}
 <div class="pagination">
   {% if paginator.next_page %}
     <a class="pagination-item older" href="https://kangsunwoo827.github.io/page{{paginator.next_page}}">Older</a>
