@@ -1,0 +1,225 @@
+<style>
+  @import url('https://fonts.googleapis.com/css?family=Orbitron');
+
+$colors: rgb(37, 81, 186), rgb(9, 199, 125), rgb(223, 44, 60), rgb(168, 17, 99),
+  rgb(45, 175, 230);
+
+* {
+  margin: 0;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  position: relative;
+  margin: 0;
+  min-height: 100%;
+  background-color: nth($colors, 1);
+  color: #fff;
+  padding:0;
+  font-family: 'Orbitron', sans-serif;
+}
+
+.body__inner {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  transform: translateZ(0);
+}
+
+button {
+  cursor: pointer;
+  background: grey;
+  color: white;
+  border: none;
+  font-size:2px;
+  margin:0;
+  padding: 2px;
+  opacity:0;
+  position:absolute;
+  right:0;
+  top:0;
+}
+
+button:hover, button:active, button:focus {
+  outline: none !important;
+  opacity: 1;
+  
+}
+.box
+{
+  width:88%;
+  height:80%;
+  background:black;
+  text-align:center; 
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  position:absolute;
+  border-radius:15px;
+  padding:20px;
+  z-index:1;
+}
+
+.dateandtime
+{
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  position:absolute;
+  z-index:2;
+}
+.clock 
+{
+  
+}
+.clock-hour
+{
+ color:white;
+ font-size:8rem;
+}
+.clock-min
+{
+ color:white;
+ font-size:8rem;
+}
+
+.date {
+ color:white;
+ padding:0;
+ margin:0;
+ font-size:2rem;
+ text-transform:uppercase;
+}
+
+.blink-blink{
+  font-size:8rem; 
+  opacity: 1;
+   animation: blink 1s infinite;
+   color:white;
+}
+
+@keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+
+
+</style>
+
+<script>
+  let $body = document.getElementsByClassName('body__inner')[0];
+let colors = [
+  [ 37,  81, 186], //blue
+  [  9, 199, 125], //green
+  [223,  44,  60], //red
+  [168,  17,  99], //purple
+  [ 45, 175, 230]  //light blue
+];
+let colorLen = colors.length;
+let step = 0;
+let colorIndices = new Array(colorLen - 1).join().split(',').map((v, i) => i);
+let gradientSpeed = 0.01; //transition speed
+
+let getColor = (color1, color2) => {
+  let r_step = 1 - step;
+  let rgb = color1.map((v, i) => {
+    return ~~(r_step * color1[i] + step * color2[i]);
+  }).join();
+  return `rgb(${rgb})`;
+};
+
+let upodateColorIdx = () => {
+  colorIndices.forEach((v, i) => {
+    if (i % 2) {
+      colorIndices[i] = ~~(colorIndices[i - 1] + Math.random() * (colorLen - 1) + 1) % colorLen;
+    } else {
+      colorIndices[i] = colorIndices[(i + 1) % (colorLen - 1)];
+    }
+  });
+};
+
+let Gradient = () => {
+  let colorNow = colorIndices.map((v) => colors[v]);
+  let color1 = getColor(colorNow[0], colorNow[1]);
+  let color2 = getColor(colorNow[2], colorNow[3]);
+
+  $body.style.backgroundImage = `linear-gradient(to right bottom, ${color1}, ${color2})`;
+
+  step += gradientSpeed;
+  if (step >= 1) {
+    step %= 1;
+    upodateColorIdx();
+  }
+};
+
+window.requestAnimFrame = (function() {
+  return  window.requestAnimationFrame        ||
+          window.webkitRequestAnimationFrame  ||
+          window.mozRequestAnimationFrame     ||
+          function(callback) {
+            window.setTimeout(callback, 1000 / 1000);
+          };
+})();
+
+(function animloop() {
+  requestAnimFrame(animloop);
+  Gradient();
+})();
+
+//==============================
+// full screen
+//==============================
+$(document).ready(function() {
+  
+  $('#toggleLink').on(function() {
+    
+    console.log('toggle fullscreen');
+    
+    toggleFullscreen();
+  });
+});
+
+function toggleFullscreen() {
+
+if(screenfull.enabled) {
+  screenfull.toggle();
+}
+}
+//==============================
+
+function updatedate() {
+  $('#date').html(moment().format('D MMMM YYYY'));
+}
+setInterval(updatedate, 1000);
+
+function updatehour() {
+  $('#clock-hour').html(moment().format('H'));
+}
+setInterval(updatehour, 1000);
+
+function updatemin() {
+  $('#clock-min').html(moment().format('mm'));
+}
+setInterval(updatemin, 1000);
+
+</script>
+
+<div class="box">
+<div class="dateandtime">
+  <div class="clock">
+    <a id="clock-hour" class="clock-hour"</a>
+    <a class="blink-blink">:</a>
+    <a id="clock-min" class="clock-min"</a>
+  </div>
+   <p id="date" class="date"></p>
+</div>
+</div>
+
+
