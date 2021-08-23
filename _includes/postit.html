@@ -1,1 +1,211 @@
+.container
+	.board
+	.pen
+	.postits
+		.rip-area{:title=>"Post it!"}
+		%textarea{:placeholder=>"Start writing here", :maxlength=>108}
 
+<style>
+  // Reset
+@import url('https://fonts.googleapis.com/css?family=Permanent+Marker');
+html, body
+{
+	margin: 0;
+	padding: 0;
+}
+.container
+{
+	position: relative;
+	width: 100vw;
+	height: 100vh;
+	margin: 0;
+	padding: 0;
+	background-color: #dedede;
+	overflow: hidden;
+}
+.board
+{
+	position: relative;
+	width: 100%;
+	height: 100%;
+	background-image: url(https://www.publicdomainpictures.net/pictures/30000/velka/cork-board.jpg);
+	background-size: 50%;
+	background-position: center;
+	&:before, &:after
+	{
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		border: solid 24px #dad3e3;
+		box-sizing: border-box;
+		box-shadow: inset 0px 1px 3px #9e9399,
+					inset 0px -1px 3px #9e9399;
+	}
+	&:after
+	{
+// 		Will probably change to looped item, leave as is for now
+		left: 12px;
+		top: 4px;
+		width: 16px;
+		height: 16px;
+		border: solid 2px #c3cddd;
+		border-radius: 50%;
+	}
+}
+.pen
+{
+// 	Not sure what kind of pen, leave as is for now
+	position: absolute;
+	width: 120px;
+	height: 120px;
+	right: 0;
+	bottom: 0;
+	background: #ffffff;
+	border-radius: 50% 50% 0 0;
+	z-index: 7;
+	&:before
+	{
+		content: "";
+		position: absolute;
+		width: 30px;
+		height: 30px;
+		bottom: 0;
+		left: 50%;
+		background: linear-gradient(to left, #ffffff 0, #ffffff 12%, #f3f3f3 13%);
+		border: 1px solid #777;
+		transform: translate(-50%, 0)
+	}
+	&:after
+	{
+		content: "";
+		position: absolute;
+		width: 40px;
+		bottom: 30px;
+		left: 50%;
+		transform: translate(-50%, 0);
+		border-bottom: 40px solid #000000;
+		border-left: 14px solid transparent;
+		border-right: 14px solid transparent;
+		box-sizing: border-box
+	}
+}
+.postits, .onhand
+{
+	position: absolute;
+	padding-top: 40px;
+	bottom: -360px;
+	left: 50%;
+	height: 360px;
+	width: 360px;
+	background: yellow;
+	transform: translate(-50%, 0);
+	box-sizing: border-box;
+	transition: bottom 0.8s ease-out;
+	z-index: 4;
+	word-break: break-word;
+	.rip-area
+	{
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 40px;
+		cursor: pointer;
+		box-shadow: inset 0 -3px 10px rgba(0,0,0,0.07);
+	}
+	textarea
+	{
+		position: relative;
+		width: 100%;
+		height: 100%;
+		padding: 0 10px;
+		background: transparent;
+		border: 0 transparent;
+		outline: transparent;
+		font-family: "Permanent Marker";
+		font-size: 30px;
+		font-weight: 400;
+		box-sizing: border-box;
+		resize: none;
+		letter-spacing: 0.5px;
+	}
+}
+.postits.o--show
+{
+	bottom: 24px;
+}
+.onhand
+{
+	padding-left: 10px;
+	padding-right: 10px;
+	font-family: "Permanent Marker";
+	font-size: 30px;
+	font-weight: 400;
+	letter-spacing: 0.5px;
+	box-shadow: 0 12px 12px rgba(0,0,0,0.3);
+	z-index: 2;
+}
+.onhand.o--active
+{
+	z-index: 6;
+}
+</style>
+
+<script>
+  let postitActive=false; //flag for postit is active
+let postitPosition={x:0, y:0}; //position of postit on click rip-area
+let id=0; //counter id
+let actId=0;
+$(".pen").on("click", function(){
+	if(!$(".postits").hasClass("o--show"))
+		$(".postits").addClass("o--show")
+	else
+		$(".postits").removeClass("o--show")
+})
+$(".rip-area").on("click", function(){
+	if(!postitActive)
+	{
+		$(".container").append("<div class='onhand o--active' id='pos_"+id+"' data-id='"+id+"'></div>")
+		$("#pos_"+id).html($(".postits textarea").val())
+		$(".postits textarea").val("");
+		$(".postits textarea").prop("disabled", true);
+		postitActive = true
+	}
+		
+})
+// drag post it, centered on cursor
+$(".container").on("pointermove", function(e){
+	if(postitActive){
+		postitPosition.x = e.clientX;
+		postitPosition.y = e.clientY;
+		$("#pos_"+actId).css('left', postitPosition.x).css('top', postitPosition.y)
+	}
+})
+
+$(".container").on("pointerdown", function(e){
+	if(postitActive){
+		$("#pos_"+id).css('left', postitPosition.x).css('top', postitPosition.y)
+		id+=1;
+		actId=id;
+		postitActive=false;
+		$(".postits textarea").prop("disabled", false)
+		setTimeout(function(){
+			$(".o--active").removeClass("o--active")
+			postitActive=false;
+		 }, 100) //set timeout so the post it cannot get reattached immediately
+	}
+})
+
+$(document).on("click", ".onhand", function(e){
+	if(!$(this).hasClass("o--active") && !postitActive)
+	{
+		$(this).addClass('o--active')
+		$(".postits textarea").prop("disabled", true);
+		postitActive = true
+		actId=$(this).data("id");
+	}
+})
+</script>
