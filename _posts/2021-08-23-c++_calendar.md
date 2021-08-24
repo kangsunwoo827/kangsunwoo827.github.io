@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 오늘도 못끝냈다.
+title: c++로 날짜 계산 프로그램 만들기!
 categories: [study]
 tags: [coding,c++]
 ---
