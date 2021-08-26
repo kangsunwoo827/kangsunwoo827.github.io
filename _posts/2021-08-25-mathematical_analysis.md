@@ -2,7 +2,7 @@
 layout: post
 title: 해석개론 진도표
 categories: [study]
-tags: [coding,c++]
+tags: [math]
 ---
 
 
