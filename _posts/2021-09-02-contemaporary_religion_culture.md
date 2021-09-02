@@ -2,7 +2,7 @@
 layout: post
 title: 현종문 진도표
 categories: [study]
-tags: [school]
+tags: [school,schedule]
 ---
 
 최근 업데이트 : 09-02
