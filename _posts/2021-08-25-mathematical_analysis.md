@@ -2,7 +2,7 @@
 layout: post
 title: 해석개론 진도표
 categories: [study]
-tags: [math,schedule]
+tags: [mathematics,schedule]
 ---
 
 최근 업데이트 : 09-01
