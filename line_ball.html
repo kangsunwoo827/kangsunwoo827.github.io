@@ -147,7 +147,7 @@ comment: true
 
 			function animate() {
 
-				requestAnimationFrame( animate );
+// 				requestAnimationFrame( animate );
 
 				render();
 
@@ -168,8 +168,8 @@ comment: true
 
 					if ( object.isLine ) {
 
-// 						object.rotation.y = time * ( i < 4 ? ( i + 1 ) : - ( i + 1 ) );
-						object.rotation.y = ( i < 4 ? ( i + 1 ) : - ( i + 1 ) );
+						object.rotation.y = time * ( i < 4 ? ( i + 1 ) : - ( i + 1 ) );
+// 						object.rotation.y = ( i < 4 ? ( i + 1 ) : - ( i + 1 ) );
 
 // 						if ( i < 5 ) {
 
