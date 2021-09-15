@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 9월 첫주의 국 4번
-categories: [daily,study]
+categories: [daily]
 tags: [cooking, pork,stew]
 ---
 원래는 매일 처음하는 요리를 할 때마다 글을 쓰려고 하는데 정신을 차려보니 벌써 금요일이 되었다. (글을 쓰는 시점은 금요일이 되기 16분전!)
