@@ -2,7 +2,7 @@
 layout: post
 title: 두번째 고비
 categories: [daily]
-tags: [thoought]
+tags: [thought]
 ---
 어제는 진짜 힘든 날이었다. 몸도 그렇고 맘도 그렇고
 
