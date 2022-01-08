@@ -1,7 +1,7 @@
 ---
 layout: default
 ---
-<script id="dsq-count-scr" src="//kangsunwoo.disqus.com/count.js" async></script>
+<!-- <script id="dsq-count-scr" src="//kangsunwoo.disqus.com/count.js" async></script> -->
 <div class="page">
   <h1 class="page-title">{{ page.title }}</h1>
   {{ content }}
@@ -11,6 +11,7 @@ layout: default
 
 
 {% if page.comment %}
+<!--   {% include disqus.html %} -->
   <script src="https://utteranc.es/client.js"
         repo="kangsunwoo827/kangsunwoo827.github.io"
         issue-term="pathname"
