@@ -16,6 +16,8 @@ sheet는 2개로 만들어놨다. 산업공학만 전공하거나, 금융경제 
 
 짜보니까 산공만 졸업하면 43학점이 남았고 금융경제까지 하면 58이 남았다. 계절까지 듣는다고 생각하면 산공만 하면 7학기도 가능할 것 같고 연계전공 들고가도 넉넉히 8학기로 졸업할 수 있을 것같다.
 물론 인생은 계획대로 되는 법이 없긴 하지만 말이다.
-https://docs.google.com/spreadsheets/d/1V8UM-3RNfDUcJc_UzjAvlkRIZXM7-LNBy6KDmO__77Q/edit?usp=sharing
+
+[학업 이수 계획표](https://docs.google.com/spreadsheets/d/1V8UM-3RNfDUcJc_UzjAvlkRIZXM7-LNBy6KDmO__77Q/edit?usp=sharing).
+
 
 끝!
